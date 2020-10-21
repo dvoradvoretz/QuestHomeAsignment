@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable, timer} from 'rxjs';
-import {mergeMap, switchMap} from 'rxjs/operators';
+import {switchMap} from 'rxjs/operators';
 import {FlightInformation} from './flight-information';
 import {DataService} from './data.service';
 
@@ -26,17 +26,15 @@ export class AppComponent implements OnInit {
     this.dataService.getWorkers().pipe(
       switchMap(data => {
         this.workers = data;
-        this.getWorkerFlightsInfo(data[0].id);
         this.isLoading = false;
-        return new Observable();
+        return this.getWorkerFlightsInfo(data[0].id);
       })
     ).subscribe();
   }
 
   getWorkerFlightsInfo(workerId): Observable<FlightInformation[]> {
     timer(0, reloadInterval) // Get update data from api every 1 min;
-      .pipe(
-        mergeMap(_ => this.dataService.getFlightsInfo(workerId))
+      .pipe(() =>  this.dataService.getFlightsInfo(workerId)
       ).subscribe(res => {
       this.flightsOfWorker = res;
       this.flightInformation = this.flightsOfWorker[0];
