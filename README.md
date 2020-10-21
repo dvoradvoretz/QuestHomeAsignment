@@ -24,6 +24,6 @@ Project is created with:
 * Sccs
 
 
-![alt text](https://github.com/dvoradvoretz/questHomeAsignment/homeAsignmentScreen.JPG)
+![alt text](https://github.com/dvoradvoretz/questHomeAsignment/blob/master/src/app/homeAsignmentScreen.JPG)
 
 	
