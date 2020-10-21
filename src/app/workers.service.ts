@@ -12,6 +12,7 @@ export class WorkersService {
   workers: Workers[] = [];
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   error;
+
   constructor(private http: HttpClient) {
   }
 
@@ -19,4 +20,12 @@ export class WorkersService {
     return this.http.get(API_URL, {})
       .pipe(catchError(this.error));
   }
+
+  //   switchMap(data => {
+  //     this.workers = data;
+  //     this.getWorkerFlightsInfo(data[0].id);
+  //     this.isLoading = false;
+  //     return new Observable();
+  //   })
+  //}
 }

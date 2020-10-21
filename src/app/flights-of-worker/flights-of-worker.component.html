@@ -32,7 +32,7 @@
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"
-      (click)="getMoreDetails(row); selection.toggle(row);"
+      (click)="getMoreDetails(row);"
       [ngClass]="{hovered: row.hovered,
        highlighted: selection.isSelected(row)  }"
       (mouseover)="row.hovered = true" (mouseout)="row.hovered = false"></tr>
