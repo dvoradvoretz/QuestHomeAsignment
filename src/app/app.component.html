@@ -1,4 +1,7 @@
-<div [ngClass]="isLoading? 'loading': 'content'" role="main" *ngIf="!isLoading">
+<div class="loading" role="main" *ngIf="isLoading">
+  <h1>Loading...</h1>
+</div>
+<div class="content" role="main" *ngIf="!isLoading">
   <app-workers-list [workers]="workers"
                     (chooseWorkerEvent)="getWorkerFlightsInfo($event)">
 

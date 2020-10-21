@@ -1,17 +1,23 @@
 $lightGrey: #e0e0e0;
-.content {
-  display: flex;
+
+.loading, .content {
+  height: 90vh;
   width: 95%;
   margin: 3% auto;
+  transition: 800ms all;
+}
+
+.content {
+  display: flex;
   border: 1px solid $lightGrey;
   justify-content: space-around;
-  transition: 500ms all;
-  height: 90vh;
 }
 
 .loading {
   background: $lightGrey;
   display: block;
-  height: 100%;
-  width: 100%;
+  h1{
+    text-align: center;
+    padding: 30% 0;
+  }
 }
