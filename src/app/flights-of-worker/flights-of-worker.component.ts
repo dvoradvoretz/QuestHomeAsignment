@@ -16,7 +16,7 @@ export class FlightsOfWorkerComponent {
   selection = new SelectionModel<FlightInformation>(false, []);
 
   getMoreDetails(flight) {
-    this.chooseFlightEvent.emit(flight);
     this.selection.toggle(flight);
+    this.chooseFlightEvent.emit(flight);
   }
 }

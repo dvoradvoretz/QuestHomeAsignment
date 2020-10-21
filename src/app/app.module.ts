@@ -9,8 +9,8 @@ import { WorkersListComponent } from './workers-list/workers-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
-import {HttpClientModule} from "@angular/common/http";
-import {MatIconModule} from "@angular/material/icon";
+import {HttpClientModule} from '@angular/common/http';
+import {MatIconModule} from '@angular/material/icon';
 import { CustomDateFormatPipe } from './custom-date-format.pipe';
 
 @NgModule({

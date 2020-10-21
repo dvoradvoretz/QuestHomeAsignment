@@ -34,6 +34,6 @@
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"
       (click)="getMoreDetails(row);"
       [ngClass]="{hovered: row.hovered,
-       highlighted: selection.isSelected(row)  }"
+       highlighted: selection.isSelected(row)}"
       (mouseover)="row.hovered = true" (mouseout)="row.hovered = false"></tr>
 </table>

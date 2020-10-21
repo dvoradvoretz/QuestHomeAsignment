@@ -5,7 +5,7 @@
 This is an Angular application that show flights of workers.
 The app contains 3 parts:
 1. Workers list - a list of all workers in the system
-2. Flights of the worker – – a table with all flight information of the worker.
+2. Flights of the worker – a table with all flight information of the worker.
 3. Flight information – this part contains an extra information of the flight.
 The flight information update automatically every 1 minute.
 The first row is default selected row of the table.

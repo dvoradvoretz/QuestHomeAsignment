@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
+import {MatSelectionListChange} from '@angular/material/list';
 import {Workers} from '../workers';
-import {MatSelectionList} from '@angular/material/list';
 
 @Component({
   selector: 'app-workers-list',
@@ -10,13 +10,12 @@ import {MatSelectionList} from '@angular/material/list';
 })
 
 export class WorkersListComponent {
-  @ViewChild('workersList') workersSelectionList: MatSelectionList;
   @Input() workers: Workers[];
   @Output() chooseWorkerEvent = new EventEmitter<string>();
   workerId;
 
-  onSelectionChange() {
-    this.workerId = this.workersSelectionList.selectedOptions.selected.map(w => w.value.id);
+  onSelectionChange(event: MatSelectionListChange) {
+    this.workerId = event.option.selectionList.selectedOptions.selected.map(w => w.value.id);
     this.chooseWorkerEvent.emit(this.workerId);
   }
 
