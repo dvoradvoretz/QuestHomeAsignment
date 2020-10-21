@@ -1,0 +1,15 @@
+.content {
+  display: flex;
+  width: 95%;
+  margin: 3% auto;
+  border: 1px solid #6b6b655c;
+  justify-content: space-around;
+  transition: 500ms all; }
+
+.loading {
+  background: #6b6b655c;
+  display: block;
+  height: 100%;
+  width: 100%; }
+
+/*# sourceMappingURL=app.component.css.map */

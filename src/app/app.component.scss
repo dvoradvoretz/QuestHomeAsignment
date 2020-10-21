@@ -1,0 +1,17 @@
+$darkGrey: #b6b655c;
+.content {
+  display: flex;
+  width: 95%;
+  margin: 3% auto;
+  border: 1px solid $darkGrey;
+  justify-content: space-around;
+  transition: 500ms all;
+  height: 90vh;
+}
+
+.loading {
+  background: $darkGrey;
+  display: block;
+  height: 100%;
+  width: 100%;
+}

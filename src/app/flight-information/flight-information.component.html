@@ -1,0 +1,15 @@
+<mat-list>
+  <mat-list-item>Plane Number: {{flightInformation?.num}}
+    <mat-icon mat-list-icon>flight</mat-icon>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Duration: {{flightInformation?.duration | customDateFormat}}
+    <mat-icon mat-list-icon>hourglass_full</mat-icon>
+  </mat-list-item>
+  <mat-list-item>Origin gate: {{flightInformation?.from_gate}}
+    <mat-icon mat-list-icon>flight_takeoff</mat-icon>
+  </mat-list-item>
+  <mat-list-item>Destination gate: {{flightInformation?.to_gate}}
+    <mat-icon mat-list-icon>flight_land</mat-icon>
+  </mat-list-item>
+</mat-list>

@@ -1,0 +1,18 @@
+app-flights-of-worker {
+  height: 100%;
+  flex: 2; }
+
+table {
+  width: 100%;
+  min-height: 100%; }
+
+.mat-row.hovered {
+  background: #eee; }
+
+.mat-row.highlighted {
+  background: #e0e0e0; }
+
+mat-row, mat-header-row, mat-footer-row, th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+  padding: 0 13px !important; }
+
+/*# sourceMappingURL=flights-of-worker.component.css.map */

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,sBAAuB;EACrB,MAAM,EAAE,MAAM;EACd,UAAU,EAAE,MAAM;EAClB,IAAI,EAAE,CAAC",
+"sources": ["../../../../../../../%D7%A9%D7%9C%D7%95%D7%9E%D7%99/Documents/HomeAssignment/WebDeveloper-HomeAssignment-master/src/app/flight-information/flight-information.component.scss"],
+"names": [],
+"file": "flight-information.component.css"
+}

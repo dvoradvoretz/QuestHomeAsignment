@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAS;EACP,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,OAAO;EACf,MAAM,EAAE,mBAAmB;EAC3B,eAAe,EAAE,YAAY;EAC7B,UAAU,EAAE,SAAS;;AAGvB,QAAS;EACP,UAAU,EAAE,SAAS;EACrB,OAAO,EAAE,KAAK;EACd,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI",
+"sources": ["../../../../../../%D7%A9%D7%9C%D7%95%D7%9E%D7%99/Documents/HomeAssignment/WebDeveloper-HomeAssignment-master/src/app/app.component.scss"],
+"names": [],
+"file": "app.component.css"
+}

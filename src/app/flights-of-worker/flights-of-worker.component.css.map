@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,qBAAqB;EACnB,MAAM,EAAE,IAAI;EACd,IAAI,EAAE,CAAC;;AAEP,KAAM;EACJ,KAAK,EAAE,IAAI;EACb,UAAU,EAAE,IAAI;;AAEhB,gBAAiB;EACf,UAAU,EAAE,IAAI;;AAGlB,oBAAqB;EACnB,UAAU,EAAE,OAAO;;AAErB,4FAA4F;EAC1F,OAAO,EAAE,iBAAiB",
+"sources": ["../../../../../../../%D7%A9%D7%9C%D7%95%D7%9E%D7%99/Documents/HomeAssignment/WebDeveloper-HomeAssignment-master/src/app/flights-of-worker/flights-of-worker.component.scss"],
+"names": [],
+"file": "flights-of-worker.component.css"
+}

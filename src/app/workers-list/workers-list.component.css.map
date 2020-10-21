@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAiB;EACf,KAAK,EAAE,GAAG;EACV,IAAI,EAAE,CAAC;EACP,MAAM,EAAE,mBAAmB",
+"sources": ["../../../../../../../%D7%A9%D7%9C%D7%95%D7%9E%D7%99/Documents/HomeAssignment/WebDeveloper-HomeAssignment-master/src/app/workers-list/workers-list.component.scss"],
+"names": [],
+"file": "workers-list.component.css"
+}

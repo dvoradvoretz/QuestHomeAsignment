@@ -1,0 +1,11 @@
+<div [ngClass]="isLoading? 'loading': 'content'" role="main" *ngIf="!isLoading">
+  <app-workers-list [workers]="workers"
+                    (chooseWorkerEvent)="getWorkerFlightsInfo($event)">
+
+  </app-workers-list>
+  <app-flights-of-worker [dataSource]="flightsOfWorker"
+                         (chooseFlightEvent)="getFlightInfo($event)">
+
+  </app-flights-of-worker>
+  <app-flight-information [flightInformation]="flightInformation"></app-flight-information>
+</div>
