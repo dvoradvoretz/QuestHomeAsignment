@@ -11,11 +11,12 @@ const reloadInterval = 1000 * 60;
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit, OnDestroy {
   workers;
   flightsOfWorker: FlightInformation[];
   flightInformation: FlightInformation;
   isLoading = true;
+  intervalFunc;
 
   constructor(private dataService: DataService) {
   }
@@ -24,21 +25,26 @@ export class AppComponent implements OnInit{
     this.dataService.getWorkers().subscribe(data => {
       this.workers = data;
       this.isLoading = false;
-      this.getWorkerFlightsInfo(data[0].id);
+      this.getFlightsData(data[0].id);
     });
   }
 
-  getWorkerFlightsInfo(workerId): Observable<FlightInformation[]> {
-    timer(0, reloadInterval) // Get update data from api every 1 min;
-      .pipe(() => this.dataService.getFlightsInfo(workerId)
-      ).subscribe(res => {
+  getFlightsData(workerId) {
+    this.dataService.getFlightsInfo(workerId).subscribe(res => {
       this.flightsOfWorker = res;
       this.flightInformation = this.flightsOfWorker[0];
     });
-    return new Observable();
+  }
+
+  getWorkerFlightsInfo(workerId) {
+    this.intervalFunc = setInterval(() => this.getFlightsData(workerId), reloadInterval);
   }
 
   getFlightInfo(flight) {
     this.flightInformation = flight;
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.intervalFunc);
   }
 }
