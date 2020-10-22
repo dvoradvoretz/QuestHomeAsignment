@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Observable, Subscription, timer} from 'rxjs';
+import {interval, Subscription} from 'rxjs';
 import {FlightInformation} from './flight-information';
 import {DataService} from './data.service';
 
-const reloadInterval = 1000 * 60;
+const reloadInterval = 1000 * 60; // flight data will get update every 1 minute
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,8 @@ export class AppComponent implements OnInit, OnDestroy {
   flightsOfWorker: FlightInformation[];
   flightInformation: FlightInformation;
   isLoading = true;
-  intervalFunc;
+  workerId: number;
+  sub: Subscription;
 
   constructor(private dataService: DataService) {
   }
@@ -37,7 +38,13 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   getWorkerFlightsInfo(workerId) {
-    this.intervalFunc = setInterval(() => this.getFlightsData(workerId), reloadInterval);
+    if (this.sub) { // reset last worker data
+      this.sub.unsubscribe();
+      this.workerId = workerId;
+    }
+    this.getFlightsData(this.workerId);
+    this.sub = interval(reloadInterval).pipe()
+      .subscribe(() => this.getFlightsData(this.workerId));
   }
 
   getFlightInfo(flight) {
@@ -45,6 +52,6 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    clearInterval(this.intervalFunc);
+    this.sub.unsubscribe();
   }
 }
