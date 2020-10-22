@@ -42,8 +42,8 @@ export class AppComponent implements OnInit, OnDestroy {
       this.sub.unsubscribe();
       this.workerId = workerId;
     }
-    this.getFlightsData(this.workerId);
-    this.sub = interval(reloadInterval).pipe()
+    this.getFlightsData(this.workerId); // get the data with no-delay for the first time
+    this.sub = interval(reloadInterval).pipe() // re-get the data every 1 minute
       .subscribe(() => this.getFlightsData(this.workerId));
   }
 
